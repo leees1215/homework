@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <table  class="table table-hover">
+
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>내용</th>
+            <th>작성자</th>
+            <th>생성날짜</th>
+            <th>조회수</th>
+
+
+
+        </tr>
+        <tr th:each="li : ${list3}">
+
+            <td>[[${li.boardKey}]]</td>
+            <td> <a th:href="@{boardSelect/{id}(id=${li.boardKey})}">[[${li.boardTitle}]]</a> </td>
+            <td>[[${li.boardContent}]]</td>
+            <td>[[${li.boardBy}]]</td>
+            <td>[[${li.boardView}]]</td>
+        </tr>
+
+
+    </table>
+</div>
+
+
+
+</body>
+</html>

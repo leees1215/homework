@@ -17,9 +17,8 @@ public class BoardController {
 
     private final BoardService boardService;
 
-
     @GetMapping("/{id}")
-    public Board selectBoard (@PathVariable("id") Integer id) {
+    public Board selectBoard(@PathVariable("id") Integer id) {
         return boardService.selectBoardById(id);
     }
 

@@ -13,10 +13,10 @@ public class BoardService {
 
     private final BoardRepository boardRepository;
 
-
-    public Board selectBoardById(Integer id){
-        return boardRepository.findById(id).orElseThrow(()-> new RuntimeException());
+    public Board selectBoardById(Integer id) {
+        return boardRepository.findById(id).orElseThrow(() -> new RuntimeException());
     }
+
     public List<Board> findAllBoard() {
         return boardRepository.findAll();
     }
